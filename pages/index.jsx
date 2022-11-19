@@ -11,11 +11,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className={styles.main}>
         <h1 className={styles.title}>
           University of Melbourne Computer Science - Open Letter
         </h1>
-        <h2>Open Letter to the University of Melbourne Computer Science department</h2>
+        <div className={styles.textContainer}>
+          <h2 className={styles.subtitle}>Letter to the University of Melbourne Computer Science department regarding the quality of curricilum</h2>
+          <p className={styles.paragraph}>Recent events present a troubled view on the breadth and depth of the CS curriculum at The University of Melbourne, particularly regarding postgraduate studies.</p> 
+          <p className={styles.paragraph}>An incomplete list of fundamental computer science classes which have left the university and not been satisfactorily replaced are:</p>
+        </div>
       </main>
     </div>
   )
