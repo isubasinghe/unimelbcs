@@ -9,22 +9,18 @@ export async function getStaticProps(context) {
 }
 
 const UniTable = () => { 
-  return <table>
-      <caption>Comparison of CS subjects</caption>
-        <tr>
-          <td></td>
-          <th scope="col">
-            UniMelb 
-          </th>
-          <th scope="col">
-            UNSW
-          </th>
-          <th scope="col">
-            Charles University
-          </th>
-          <th scope="col">Technical University of Munich</th>
-        </tr>
-  </table>
+  return (
+    <table>
+      <thead>
+        <tr><th></th><th>UniMelb</th><th>UNSW</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>Compiler</th><td>1</td><td>3</td></tr>
+        <tr><th>Operating Systems</th><td>5</td><td>7</td></tr>
+        <tr><th>Program Analysis</th><td>0</td><td>0</td></tr>
+      </tbody>
+    </table>
+  );
 }
 
 export default function Home(props) {
@@ -49,7 +45,7 @@ export default function Home(props) {
         </div>
         <hr/>
         <h3>Below is a comparision of fundamental CS subjects</h3>
-        <UniTable/>
+        <UniTable />
         <hr/> 
         <h3>Below is the list of people who have signed this letter. You can also submit your signature here.</h3>
         <p>Anonymous names are verified to be real, however, they are not displayed in case this may affect the student or staff member negatively.</p>
