@@ -1,0 +1,717 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Main content */
+main {
+    margin-bottom: 3rem;
+}
+
+article {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+}
+
+.letter-content {
+    padding: 0 1rem;
+}
+
+/* Typography */
+h2 {
+    font-size: 1.8rem;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #1e40af;
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+    border-left: 4px solid #3b82f6;
+    padding-left: 1rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #1e40af;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Lists */
+ul {
+    margin: 1rem 0 1.5rem 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+li strong {
+    color: #1e40af;
+}
+
+/* Table styles */
+.comparison-table {
+    margin: 2rem 0;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: #1e3a8a;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+td strong {
+    color: #1e40af;
+}
+
+/* Table status styling */
+.available {
+    background-color: #dcfce7;
+    color: #166534;
+    font-weight: 600;
+}
+
+.limited {
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: 600;
+}
+
+.unavailable {
+    background-color: #fee2e2;
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.table-note {
+    margin-top: 1rem;
+    text-align: center;
+    color: #64748b;
+}
+
+/* Demands section styling */
+.demands-list {
+    margin: 2rem 0;
+}
+
+.demand-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3b82f6;
+}
+
+.demand-item h4 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.demand-item ul {
+    margin: 0 0 0 1.5rem;
+}
+
+.demand-item li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.urgency-note {
+    background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.urgency-note p {
+    margin: 0;
+    color: #92400e;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Links */
+a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+/* Signature section */
+.signature-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+.signature-section h3 {
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.signature-section > p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+.form-container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Signature Form Styles */
+.signature-form {
+    max-width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.checkbox-group {
+    margin: 1.5rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 0.75rem;
+    margin-top: 0.1rem;
+    transform: scale(1.2);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    position: relative;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-loading {
+    display: none;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.success-message h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.success-message p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.signature-info {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+}
+
+.signature-info p strong {
+    color: #1e40af;
+    font-size: 1.1rem;
+}
+
+.signature-info ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.signature-info li {
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.signature-info small {
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Signatures Display */
+.signatures-display {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.signatures-display h3 {
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.signature-count {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+.signatures-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.signature-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signature-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signature-name {
+    font-weight: 700;
+    color: #1e40af;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.signature-program {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.signature-status {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.signature-comment {
+    color: #374151;
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.signature-date {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.loading-signatures {
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+    grid-column: 1 / -1;
+    padding: 2rem;
+}
+
+.load-more-container {
+    text-align: center;
+}
+
+.load-more-btn {
+    background: #f1f5f9;
+    color: #475569;
+    border: 2px solid #e2e8f0;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+
+.error-message {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #dc2626;
+    margin-top: 1rem;
+}
+
+/* Letter footer */
+.letter-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.letter-footer p:last-child {
+    margin-top: 1rem;
+}
+
+/* Site footer */
+.site-footer {
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 2rem 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.site-footer small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #94a3b8;
+}
+
+/* Code styling */
+code {
+    background-color: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #e11d48;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    header {
+        padding: 2rem 0;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .letter-content {
+        padding: 0 0.5rem;
+    }
+    
+    .comparison-table {
+        padding: 1rem;
+    }
+    
+    th, td {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.9rem;
+    }
+    
+    th {
+        font-size: 0.8rem;
+    }
+    
+    .signature-section {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .signature-section h3 {
+        font-size: 1.4rem;
+    }
+    
+    .form-container {
+        padding: 0.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    .signatures-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .signatures-display {
+        padding: 1.5rem;
+    }
+    
+    .demand-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .demand-item h4 {
+        font-size: 1rem;
+    }
+    
+    .urgency-note {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .urgency-note p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    ul {
+        margin-left: 1.5rem;
+    }
+    
+    .comparison-table {
+        padding: 0.8rem;
+        margin: 1.5rem -10px;
+    }
+    
+    th, td {
+        padding: 0.4rem 0.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    header {
+        background: none !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .site-footer {
+        display: none;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+    
+    .comparison-table {
+        background: none !important;
+        border: 1px solid #ccc !important;
+    }
+    
+    table {
+        box-shadow: none !important;
+    }
+    
+    th {
+        background: #f0f0f0 !important;
+        color: black !important;
+    }
+} 
