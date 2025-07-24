@@ -19,9 +19,52 @@ body {
 
 /* Container */
 .container {
-    max-width: 800px;
+    max-width: 1400px;
+    min-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
+    width: 90%;
+}
+
+/* Progressive container sizing */
+@media (min-width: 768px) {
+    .container {
+        width: 85%;
+        padding: 0 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 80%;
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 75%;
+        max-width: 1600px;
+    }
+}
+
+/* Wider container for sections with tables */
+@media (min-width: 1024px) {
+    .comparison-table {
+        margin: 2rem -2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .comparison-table {
+        margin: 2rem -3rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .comparison-table {
+        margin: 2rem -4rem;
+    }
 }
 
 /* Header */
@@ -92,6 +135,26 @@ p {
     hyphens: auto;
 }
 
+/* Enhanced typography for larger screens */
+@media (min-width: 1200px) {
+    body {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+    
+    h1 {
+        font-size: 2.75rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Lists */
 ul {
     margin: 1rem 0 1.5rem 2rem;
@@ -107,38 +170,70 @@ li strong {
 
 /* Table styles */
 .comparison-table {
-    margin: 2rem 0;
+    margin: 2rem -2rem;
     background: #f8fafc;
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
+    max-width: none;
 }
 
 .table-container {
-    overflow-x: auto;
     margin-top: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    table-layout: fixed;
 }
 
 th, td {
-    padding: 0.75rem;
+    padding: 0.75rem 0.6rem;
     text-align: left;
     border-bottom: 1px solid #e2e8f0;
+    word-wrap: break-word;
+    vertical-align: top;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Optimized column widths for better fit */
+th:first-child, td:first-child {
+    width: 24%;
+    font-weight: 600;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 17%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 15%;
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 12%;
+}
+
+th:nth-child(5), td:nth-child(5) {
+    width: 16%;
+}
+
+th:nth-child(6), td:nth-child(6) {
+    width: 16%;
 }
 
 th {
     background-color: #1e3a8a;
     color: white;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.3;
 }
 
 tr:hover {
@@ -218,6 +313,84 @@ td strong {
     color: #92400e;
     font-size: 1.1rem;
     font-weight: 500;
+}
+
+/* Curriculum analysis styling */
+.curriculum-analysis {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.curriculum-analysis h4 {
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.subject-category {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1rem;
+    border-left: 3px solid #3b82f6;
+}
+
+.subject-category h5 {
+    color: #1e40af;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.subject-category ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.subject-category li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+/* Crisis points styling */
+.crisis-points {
+    margin: 2rem 0;
+}
+
+.crisis-item {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 4px solid #dc2626;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.crisis-item h4 {
+    color: #dc2626;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.crisis-item p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.6;
 }
 
 /* Links */
@@ -408,6 +581,129 @@ a:hover {
     font-style: italic;
 }
 
+/* GitHub Signature Styles */
+.github-signature-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.signature-steps {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+}
+
+.signature-steps h4 {
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    background: #3b82f6;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.step-content h5 {
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.step-content p {
+    margin: 0;
+    color: #374151;
+}
+
+.github-edit-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%);
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.github-edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(36, 41, 46, 0.3);
+    color: white !important;
+}
+
+.code-template {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.code-template pre {
+    margin: 0;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+    font-size: 0.85rem;
+    color: #374151;
+    overflow-x: auto;
+}
+
+.github-benefits {
+    background: rgba(34, 197, 94, 0.05);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid #22c55e;
+}
+
+.github-benefits h4 {
+    color: #15803d;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.github-benefits ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.github-benefits li {
+    margin-bottom: 0.75rem;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.github-benefits strong {
+    color: #15803d;
+}
+
 /* Signatures Display */
 .signatures-display {
     margin: 3rem 0;
@@ -568,10 +864,38 @@ code {
     color: #e11d48;
 }
 
+/* Enhanced table styling for larger screens */
+@media (min-width: 1200px) {
+    th, td {
+        padding: 0.9rem 0.7rem;
+        font-size: 0.95rem;
+    }
+    
+    th {
+        font-size: 0.9rem;
+    }
+}
+
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    th, td {
+        font-size: 0.82rem;
+        padding: 0.5rem 0.4rem;
+    }
+    
+    th {
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 767px) {
     .container {
-        padding: 0 15px;
+        width: 95%;
+        padding: 0 1rem;
     }
     
     header {
@@ -600,15 +924,25 @@ code {
     
     .comparison-table {
         padding: 1rem;
+        margin: 2rem -0.5rem;
+    }
+    
+    .table-container {
+        overflow-x: auto;
     }
     
     th, td {
         padding: 0.5rem 0.3rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     th {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Reset fixed widths on mobile */
+    th, td {
+        width: auto !important;
     }
     
     .signature-section {
@@ -658,6 +992,54 @@ code {
     .urgency-note p {
         font-size: 1rem;
     }
+    
+    .curriculum-analysis {
+        padding: 1rem;
+    }
+    
+    .subject-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .subject-category {
+        padding: 0.75rem;
+    }
+    
+    .crisis-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .crisis-item h4 {
+        font-size: 1rem;
+    }
+    
+    .github-signature-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .signature-steps,
+    .github-benefits {
+        padding: 1rem;
+    }
+    
+    .step-item {
+        margin-bottom: 1rem;
+    }
+    
+    .step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+        margin-right: 0.75rem;
+    }
+    
+    .github-edit-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -675,12 +1057,21 @@ code {
     
     .comparison-table {
         padding: 0.8rem;
-        margin: 1.5rem -10px;
+        margin: 1.5rem -5px;
+    }
+    
+    .table-container {
+        overflow-x: auto;
     }
     
     th, td {
         padding: 0.4rem 0.2rem;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        width: auto !important;
+    }
+    
+    th {
+        font-size: 0.7rem;
     }
 }
 
