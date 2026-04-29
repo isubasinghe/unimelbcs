@@ -26,5 +26,12 @@
     "status": "Graduate",
     "comment": "Whoever designed the current curriculum doesn't seem to know what's going on in the outside world",
     "date": "2026-04-29"
+  },
+  {
+    "name": "Isitha Subasinghe",
+    "program": "MIT",
+    "status": "Graduate",
+    "comment": "I found the programming language course to be quite interesting, but they cancelled it. \r\nIf it wasn't for exchange, I would have had near zero CS knowledge outside of the algorithms & DS",
+    "date": "2026-04-29"
   }
 ]
