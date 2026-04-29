@@ -40,5 +40,12 @@
     "status": "Current Student",
     "comment": "I also want Declarative Programming and some Master's subjects to have their own undergraduate version, though I do understand this is not an easy problem.",
     "date": "2026-04-29"
-  }
+  },
+  {
+    "name": "Anqi Wang",
+    "program": "Master of Data Science",
+    "status": "Current Student",
+    "comment": "Please make a separate subject for discrete mathematics.",
+    "date": "2026-04-29"
+  },
 ]
