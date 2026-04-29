@@ -1,0 +1,45 @@
+name: Build signatures
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - signatures.json
+      - build.py
+      - index.html
+      - requirements.txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-signatures
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      - run: python build.py
+
+      - name: Commit rebuilt index.html
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Rebuild signatures [skip ci]"
+          git push

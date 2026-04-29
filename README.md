@@ -26,27 +26,42 @@ The site is heavily optimized for search terms like "UniMelb CS", "University of
 ## Files Structure
 
 ```
-├── index.html          # Main webpage with SEO optimization
+├── index.html          # Main webpage (signature block is auto-generated)
 ├── styles.css          # Responsive stylesheet
+├── script.js           # Share-button interactions
+├── signatures.json     # Source of truth for signatures
+├── build.py            # Renders signatures.json into index.html via Jinja
+├── requirements.txt    # Python deps for build.py
 ├── sitemap.xml         # Search engine sitemap
 ├── robots.txt          # Crawler instructions
 └── README.md           # Project documentation
 ```
 
+## Signing the letter
+
+Add an entry to `signatures.json` via pull request. After merge, GitHub Actions
+runs `build.py` to render the signature into `index.html`.
+
+## Building locally
+
+The signature list in `index.html` is generated from `signatures.json` between
+the `<!-- SIGNATURES:START -->` and `<!-- SIGNATURES:END -->` markers. After
+editing `signatures.json` (or to preview locally):
+
+```bash
+pip install -r requirements.txt
+python build.py
+```
+
+The script is idempotent — re-running with no changes is a no-op.
+
 ## Local Development
 
 1. Clone or download the project files
-2. Open `index.html` in a web browser
-3. For local server (recommended):
+2. Run `python build.py` after any change to `signatures.json`
+3. Serve locally:
    ```bash
-   # Using Python
    python -m http.server 8000
-   
-   # Using Node.js
-   npx serve .
-   
-   # Using PHP
-   php -S localhost:8000
    ```
 
 ## Deployment
