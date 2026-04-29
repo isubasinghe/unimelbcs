@@ -4,6 +4,20 @@
     "program": "BOS",
     "status": "Current Student",
     "comment": "el psy kongroo",
-    "date": "2026/4/29"
+    "date": "2026-04-29"
+  },
+  {
+    "name": "Ba Quyen Chu",
+    "program": "MIT 2025",
+    "status": "Current Student",
+    "comment": "Quyen",
+    "date": "2025-08-07"
+  },
+  {
+    "name": "Daksh Agrawal",
+    "program": "BSc Data Science",
+    "status": "Graduate",
+    "comment": "",
+    "date": "2025-08-04"
   }
-] 
+]
