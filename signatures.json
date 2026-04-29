@@ -33,5 +33,12 @@
     "status": "Graduate",
     "comment": "I found the programming language course to be quite interesting, but they cancelled it. \r\nIf it wasn't for exchange, I would have had near zero CS knowledge outside of the algorithms & DS",
     "date": "2026-04-29"
+  },
+  {
+    "name": "Tuan Khanh Bui",
+    "program": "Bachelor of Science - Major in Computing and Software Systems",
+    "status": "Current Student",
+    "comment": "I also want Declarative Programming and some Master's subjects to have their own undergraduate version, though I do understand this is not an easy problem.",
+    "date": "2026-04-29"
   }
 ]
