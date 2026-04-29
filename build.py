@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from jinja2 import Environment, BaseLoader, select_autoescape
@@ -21,9 +21,12 @@ from jinja2 import Environment, BaseLoader, select_autoescape
 ROOT = Path(__file__).parent
 SIGNATURES_PATH = ROOT / "signatures.json"
 HTML_PATH = ROOT / "index.html"
+SITEMAP_PATH = ROOT / "sitemap.xml"
 
 START_MARKER = "<!-- SIGNATURES:START -->"
 END_MARKER = "<!-- SIGNATURES:END -->"
+LASTMOD_START = "<!-- LASTMOD:START -->"
+LASTMOD_END = "<!-- LASTMOD:END -->"
 
 SIGNATURE_TEMPLATE = """\
                     <div class="signature-count">
@@ -57,6 +60,46 @@ def format_date(value: str) -> str:
         return parsed.strftime("%d %b %Y").lstrip("0")
 
 
+def update_reviewed_on(html: str) -> str:
+    """Replace the LASTMOD-marked block with a fresh <time> element for today."""
+    today_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today_human = format_date(today_iso)
+    replacement = f'{LASTMOD_START}<time datetime="{today_iso}">{today_human}</time>{LASTMOD_END}'
+    pattern = re.compile(
+        re.escape(LASTMOD_START) + r".*?" + re.escape(LASTMOD_END),
+        flags=re.DOTALL,
+    )
+    if not pattern.search(html):
+        print(
+            f"warning: {LASTMOD_START}/{LASTMOD_END} markers not found in HTML",
+            file=sys.stderr,
+        )
+        return html
+    return pattern.sub(lambda _: replacement, html)
+
+
+def update_sitemap_lastmod() -> bool:
+    """Set sitemap.xml's <lastmod> to today's UTC date. Returns True if changed."""
+    if not SITEMAP_PATH.exists():
+        return False
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    text = SITEMAP_PATH.read_text()
+    new_text, count = re.subn(
+        r"(<lastmod>)[^<]*(</lastmod>)",
+        rf"\g<1>{today}\g<2>",
+        text,
+    )
+    if not count:
+        print(f"warning: no <lastmod> tag found in {SITEMAP_PATH.name}", file=sys.stderr)
+        return False
+    if new_text == text:
+        print(f"{SITEMAP_PATH.name} lastmod already {today}.")
+        return False
+    SITEMAP_PATH.write_text(new_text)
+    print(f"Updated {SITEMAP_PATH.name} lastmod to {today}.")
+    return True
+
+
 def main() -> int:
     raw = json.loads(SIGNATURES_PATH.read_text())
     signatures = sorted(raw, key=lambda s: s.get("date", ""), reverse=True)
@@ -85,12 +128,14 @@ def main() -> int:
         return 1
 
     new_html = pattern.sub(lambda _: rendered, html)
-    if new_html == html:
+    new_html = update_reviewed_on(new_html)
+    if new_html != html:
+        HTML_PATH.write_text(new_html)
+        print(f"Wrote {len(signatures)} signatures to {HTML_PATH.name}.")
+    else:
         print(f"{HTML_PATH.name} already up to date ({len(signatures)} signatures).")
-        return 0
 
-    HTML_PATH.write_text(new_html)
-    print(f"Wrote {len(signatures)} signatures to {HTML_PATH.name}.")
+    update_sitemap_lastmod()
     return 0
 
 

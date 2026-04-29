@@ -973,6 +973,19 @@ td:first-child, th:first-child { font-weight: 500; }
 
 .letter-footer p { margin-bottom: 0.5rem; }
 
+.letter-footer .reviewed-on {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+    color: var(--ink-faint);
+    font-size: 0.82rem;
+}
+
+.letter-footer .reviewed-on time {
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-muted);
+}
+
 /* =====================================================================
    Site footer
    ===================================================================== */
