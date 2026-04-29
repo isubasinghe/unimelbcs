@@ -88,6 +88,52 @@ body {
     padding: 1rem 0 0;
 }
 
+/* On-page table of contents — sits between header and salutation */
+.toc {
+    max-width: var(--content-width);
+    margin: 0 auto 2rem;
+    padding: 1rem 1.25rem;
+    background: rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 8px;
+    font-size: 0.92rem;
+}
+
+.toc-heading {
+    margin: 0 0 0.6rem;
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(15, 23, 42, 0.6);
+}
+
+.toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    columns: 2;
+    column-gap: 1.75rem;
+    line-height: 1.55;
+}
+
+.toc li { break-inside: avoid; padding: 0.1rem 0; }
+
+.toc a {
+    color: rgba(15, 23, 42, 0.85);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.toc a:hover,
+.toc a:focus {
+    color: #1d4ed8;
+    border-bottom-color: currentColor;
+}
+
+@media (max-width: 600px) {
+    .toc ol { columns: 1; }
+}
+
 /* Cap text elements to a comfortable reading measure. Structural blocks
    (tables, signature lists, demand items, etc.) are not selected here
    and stay full container width. */
@@ -158,6 +204,18 @@ body > header .subtitle {
     line-height: 1.55;
     max-width: 56ch;
     margin: 0;
+}
+
+body > header .dateline {
+    color: rgba(241, 245, 249, 0.55);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin: 1rem 0 0;
+}
+
+body > header .dateline time {
+    color: rgba(241, 245, 249, 0.75);
 }
 
 /* =====================================================================

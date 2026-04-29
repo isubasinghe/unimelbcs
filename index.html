@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>UniMelb CS Curriculum: An Open Letter from Students &amp; Graduates</title>
+    <title>UniMelb CS Curriculum — Open Letter from Students</title>
     <meta name="description" content="UniMelb Computer Science is missing core courses on compilers, OS, and database internals. An open letter from students and graduates calling for curriculum reform.">
     <meta name="author" content="UniMelb CS Students">
     <meta name="robots" content="index, follow">
@@ -19,7 +19,7 @@
     <meta property="og:image" content="https://unimelb-cs-letter.com/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Open Letter to the University of Melbourne Computer Science Department">
+    <meta property="og:image:alt" content="Open Letter to the School of Computing and Information Systems, University of Melbourne">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -27,19 +27,22 @@
     <meta name="twitter:description" content="UniMelb CS students speak out about missing fundamental courses and call for curriculum reform.">
     <meta name="twitter:image" content="https://unimelb-cs-letter.com/og-image.png">
 
-    <!-- Structured Data: Article -->
+    <!-- Structured Data: Open Letter (Opinion piece) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Open Letter to University of Melbourne CS Department",
-        "description": "An open letter addressing concerns about the University of Melbourne Computer Science curriculum and education quality",
+        "@type": "OpinionNewsArticle",
+        "headline": "An Open Letter on the UniMelb CS Curriculum",
+        "alternativeHeadline": "Open letter to the School of Computing and Information Systems, University of Melbourne",
+        "description": "An open letter from current and former UniMelb CS students about missing core courses on compilers, operating systems, and database internals — and a call for curriculum reform.",
         "author": {
             "@type": "Organization",
             "name": "UniMelb CS Students"
         },
-        "datePublished": "2024-01-01",
+        "datePublished": "2025-07-24",
         "dateModified": "2026-04-29",
+        "inLanguage": "en-AU",
+        "keywords": "UniMelb CS, University of Melbourne computer science, School of Computing and Information Systems, UniMelb CIS, UniMelb MIT, UniMelb MCS, COMP90045, COMP30022, computer science curriculum, UniMelb vs UNSW, UniMelb vs ANU",
         "publisher": {
             "@type": "Organization",
             "name": "UniMelb CS Students"
@@ -49,15 +52,21 @@
             "@type": "WebPage",
             "@id": "https://unimelb-cs-letter.com/"
         },
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".subtitle", ".letter-content > p", ".letter-content > h3"]
+        },
         "about": [
             {
-                "@type": "Organization",
-                "name": "University of Melbourne",
-                "sameAs": "https://www.unimelb.edu.au/"
-            },
-            {
                 "@type": "EducationalOrganization",
-                "name": "University of Melbourne Computer Science Department"
+                "name": "School of Computing and Information Systems",
+                "alternateName": ["UniMelb CIS", "UniMelb CS"],
+                "url": "https://cis.unimelb.edu.au/",
+                "parentOrganization": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Melbourne",
+                    "sameAs": "https://www.unimelb.edu.au/"
+                }
             }
         ]
     }
@@ -129,19 +138,37 @@
     <header>
         <div class="container">
             <span class="eyebrow">Open Letter</span>
-            <h1>To the University of Melbourne Computer Science Department</h1>
-            <p class="subtitle">Concerns from current and former students about the CS curriculum.</p>
+            <h1>The UniMelb CS Curriculum</h1>
+            <p class="subtitle">An open letter to the <a href="https://cis.unimelb.edu.au/" rel="noopener">School of Computing and Information Systems</a> at the University of Melbourne, from current and former students of its CS programs.</p>
+            <p class="dateline">Published <time datetime="2025-07-24">24 Jul 2025</time> &middot; Last updated <!-- LASTMOD:START --><time datetime="2026-04-29">29 Apr 2026</time><!-- LASTMOD:END --></p>
         </div>
     </header>
 
     <main>
         <article class="container">
             <section class="letter-content">
-                <h2>Dear University of Melbourne CS department,</h2>
+                <nav class="toc" aria-labelledby="toc-heading">
+                    <p class="toc-heading" id="toc-heading">On this page</p>
+                    <ol>
+                        <li><a href="#missing-courses">Missing fundamental CS courses</a></li>
+                        <li><a href="#undergraduate">Undergraduate program: breadth over depth</a></li>
+                        <li><a href="#postgraduate">The MIT and MCS postgraduate programs</a></li>
+                        <li><a href="#graduates">What this does to graduates</a></li>
+                        <li><a href="#weakened">Courses that have weakened</a></li>
+                        <li><a href="#comparison">UniMelb CS vs UNSW, ANU, and overseas peers</a></li>
+                        <li><a href="#demands">What we're asking for</a></li>
+                        <li><a href="#sign">Sign this letter</a></li>
+                        <li><a href="#signatures">Current signatures</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#share">Share</a></li>
+                    </ol>
+                </nav>
+
+                <h2>Dear School of Computing and Information Systems,</h2>
 
                 <p>We're current and former postgraduate students of the UniMelb CS programs. The curriculum is in worse shape than most students or staff seem to realise. After comparing notes with peers from other universities, and going through technical interviews ourselves, the gaps are obvious, and they hurt the value of a UniMelb CS degree.</p>
 
-                <h3>Missing fundamental courses</h3>
+                <h3 id="missing-courses">Missing fundamental courses</h3>
                 <p>UniMelb has dropped core CS courses that are still standard everywhere else. The discontinued ones include:</p>
                 <ul>
                     <li><strong>Programming Language Implementation (COMP90045)</strong> - Compilers and interpreters</li>
@@ -156,7 +183,7 @@
 
                 <p>This isn't a minor curriculum tweak. It's an abandonment of core CS education. Students are graduating without understanding how programming languages work, how operating systems manage resources, how databases are implemented, or how to make code run fast.</p>
 
-                <h3>The undergraduate program: breadth over depth</h3>
+                <h3 id="undergraduate">The undergraduate program: breadth over depth</h3>
                 <p>The undergraduate program has the same problem. The <a href="https://study.unimelb.edu.au/find/courses/major/computing-and-software-systems/structure/#sample-plans" target="_blank" rel="noopener">Computing and Software Systems major</a> only requires 12 mandatory subjects. Here's the full list:</p>
 
                 <div class="curriculum-analysis">
@@ -199,7 +226,7 @@
 
                 <p>This curriculum produces web developers, not computer scientists. The capstone (COMP30022) is website development, a task most coding bootcamp grads can do after a few months. Where are the compiler, OS, database engine, or systems programming projects that anchor a real CS degree?</p>
 
-                <h3>The postgraduate programs are broken</h3>
+                <h3 id="postgraduate">The MIT and MCS postgraduate programs are broken</h3>
                 <p>The MIT and MCS programs try to serve two audiences in the same classrooms: career-changers with no CS background, and CS graduates looking for advanced study. The compromise satisfies neither, and the courses end up watered down for everyone.</p>
 
                 <div class="crisis-points">
@@ -214,7 +241,7 @@
                     </div>
                 </div>
 
-                <h3>What this does to graduates</h3>
+                <h3 id="graduates">What this does to graduates</h3>
                 <p>These aren't hypothetical complaints. Graduates regularly hit the same problems in interviews and on the job:</p>
                 <ul>
                     <li>Employers tell us UniMelb grads lack systems knowledge their peers from other universities have.</li>
@@ -224,7 +251,7 @@
                     <li>Master's grads with wildly different skill levels are competing for the same jobs, which devalues the degree for everyone.</li>
                 </ul>
 
-                <h3>The courses that remain have weakened too</h3>
+                <h3 id="weakened">The courses that remain have weakened too</h3>
                 <p>It's not just what's missing. The subjects still on offer have themselves got weaker. Two examples:</p>
 
                 <p><strong>Internet Technologies (COMP90007)</strong> is sold as a comprehensive networking course. The reality, according to students who've taken it:</p>
@@ -243,7 +270,7 @@
                     <li>Students who've taken it call it "Java Sockets 101", not a graduate distributed systems course.</li>
                 </ul>
 
-                <h3>How UniMelb compares internationally</h3>
+                <h3 id="comparison">UniMelb CS vs UNSW, ANU, and overseas peers</h3>
                 <p>When you put UniMelb next to peer programs overseas, the gap shows immediately. Students who've gone on exchange come back saying the same thing: the academic rigour and breadth are on a different level.</p>
 
                 <p>At top international universities, a single-semester course can have you building a real operating system, implementing a production-quality compiler, or sending bug fixes to GCC and Clang. UniMelb students struggle to find a course that <em>introduces</em> these topics, let alone makes you build one.</p>
@@ -319,7 +346,7 @@
                     <p class="table-note"><small><strong>Legend:</strong> ✓ = Available | ✗ = Not offered &middot; Course availability checked <!-- LASTMOD:START --><time datetime="2026-04-29">29 Apr 2026</time><!-- LASTMOD:END --></small></p>
                 </section>
 
-                <h3>What we're asking for</h3>
+                <h3 id="demands">What we're asking for</h3>
                 <p>The University of Melbourne has a responsibility to teach computer science properly, in a way that prepares students for both industry and research. Concretely, we're asking for:</p>
 
                 <div class="demands-list">
@@ -365,10 +392,10 @@
                 </div>
 
                 <div class="urgency-note">
-                    <p>Every semester this stays the way it is, another cohort graduates ill-equipped for the job market they're being sold into. We don't think the department can keep ignoring this.</p>
+                    <p>Every semester this stays the way it is, another cohort graduates ill-equipped for the job market they're being sold into. We don't think the school can keep ignoring this.</p>
                 </div>
 
-                <section class="signature-section">
+                <section class="signature-section" id="sign">
                     <h3>Sign this letter</h3>
                     <p>If you've experienced any of this, sign with Google in 30 seconds, or open a pull request manually if you'd rather. Every signature helps make the scale of the problem visible.</p>
 
@@ -436,13 +463,13 @@
                         <p><strong>Why sign?</strong></p>
                         <ul>
                             <li>Make the scale of concern visible.</li>
-                            <li>Make it harder for the department to dismiss this as a few loud voices.</li>
+                            <li>Make it harder for the school to dismiss this as a few loud voices.</li>
                         </ul>
                         <p><small>Signatures are public on GitHub. Only add information you're comfortable sharing publicly.</small></p>
                     </div>
                 </section>
 
-                <section class="signatures-display">
+                <section class="signatures-display" id="signatures">
                     <h3>Current signatures</h3>
                     <!-- SIGNATURES:START -->
                     <div class="signature-count">
@@ -538,7 +565,7 @@ If it wasn&#39;t for exchange, I would have had near zero CS knowledge outside o
 
                 <footer class="letter-footer">
                     <p><strong>Regards,</strong></p>
-                    <p>A collection of frustrated UniMelb CS post grads who hang around in our community. We welcome the CS department to come and talk to us.</p>
+                    <p>A collection of frustrated UniMelb CS post grads who hang around in our community. We welcome the School of Computing and Information Systems to come and talk to us.</p>
                     <p><a href="https://discord.gg/MXqbgYWK82" target="_blank" rel="noopener noreferrer">Join our Discord community</a></p>
                     <p class="reviewed-on">Last reviewed: <!-- LASTMOD:START --><time datetime="2026-04-29">29 Apr 2026</time><!-- LASTMOD:END --></p>
                 </footer>
