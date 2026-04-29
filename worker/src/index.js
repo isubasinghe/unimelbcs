@@ -116,13 +116,11 @@ async function handleCallback(request, env) {
     { email: profile.email, name: profile.name, exp: Date.now() + SESSION_TTL_MS },
     env.SESSION_SECRET,
   );
-  return new Response(null, {
-    status: 302,
-    headers: {
-      "Set-Cookie": cookie("session", session, SESSION_TTL_MS / 1000) + ", " + cookie("oauth_state", "", 0),
-      Location: `${env.WORKER_URL}/sign`,
-    },
-  });
+  const headers = new Headers();
+  headers.append("Set-Cookie", cookie("session", session, SESSION_TTL_MS / 1000));
+  headers.append("Set-Cookie", cookie("oauth_state", "", 0));
+  headers.set("Location", `${env.WORKER_URL}/sign`);
+  return new Response(null, { status: 302, headers });
 }
 
 // ---------- Signing form ----------

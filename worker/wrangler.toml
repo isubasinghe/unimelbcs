@@ -18,3 +18,7 @@ WORKER_URL = "https://unimelb-cs-letter-signer.subasingheisitha.workers.dev"
 #   wrangler secret put GOOGLE_CLIENT_SECRET
 #   wrangler secret put GITHUB_TOKEN
 #   wrangler secret put SESSION_SECRET
+[observability]
+[observability.logs]
+enabled = true
+invocation_logs = true
