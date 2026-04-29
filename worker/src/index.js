@@ -164,7 +164,7 @@ async function handleSign(request, env) {
   };
 
   try {
-    const prUrl = await openPullRequest(signature, session.email, env);
+    const prUrl = await openPullRequest(signature, env);
     return html(successPage(prUrl, env));
   } catch (err) {
     if (err.code === "DUPLICATE") {
@@ -177,7 +177,7 @@ async function handleSign(request, env) {
 
 // ---------- GitHub PR creation ----------
 
-async function openPullRequest(signature, email, env) {
+async function openPullRequest(signature, env) {
   const owner = env.GITHUB_OWNER;
   const repo = env.GITHUB_REPO;
   const headers = {
@@ -254,8 +254,6 @@ async function openPullRequest(signature, email, env) {
       base: defaultBranch,
       body: [
         `Submitted via Sign with Google.`,
-        ``,
-        `Verified Google email: \`${email}\``,
         ``,
         "```json",
         JSON.stringify(signature, null, 2),
