@@ -3,6 +3,17 @@
 // sheet on mobile when it's available.
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Hide the Sign-with-Google block until the worker URL has been wired up.
+    const googleBtn = document.querySelector('.google-signin-btn');
+    if (googleBtn && googleBtn.href.includes('WORKER_URL_PLACEHOLDER')) {
+        const block = googleBtn.closest('.google-signin');
+        const divider = block && block.nextElementSibling;
+        if (block) block.style.display = 'none';
+        if (divider && divider.classList.contains('signing-divider')) {
+            divider.style.display = 'none';
+        }
+    }
+
     const copyBtn = document.getElementById('copyLinkBtn');
     if (!copyBtn) return;
 

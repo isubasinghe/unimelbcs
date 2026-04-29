@@ -1,0 +1,8 @@
+GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GITHUB_TOKEN=github_pat_xxx
+SESSION_SECRET=run-openssl-rand-base64-48-and-paste-here
+
+# In dev, override WORKER_URL to localhost so OAuth redirects back here
+# instead of to the deployed worker.
+WORKER_URL=http://localhost:8787

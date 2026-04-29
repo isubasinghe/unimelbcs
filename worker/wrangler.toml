@@ -1,0 +1,20 @@
+name = "unimelb-cs-letter-signer"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Public-facing config. Override in your Cloudflare dashboard or here.
+[vars]
+GITHUB_OWNER = "isubasinghe"
+GITHUB_REPO = "unimelbcs"
+FRONTEND_URL = "https://unimelb-cs-letter.com"
+# WORKER_URL must match the URL where this worker is deployed.
+# Replace after first deploy (default workers.dev URL or your custom domain).
+WORKER_URL = "https://unimelb-cs-letter-signer.subasingheisitha.workers.dev"
+# Uncomment to restrict sign-in to a single email domain:
+# ALLOWED_EMAIL_DOMAIN = "unimelb.edu.au"
+
+# Secrets are NOT in this file. Set via:
+#   wrangler secret put GOOGLE_CLIENT_ID
+#   wrangler secret put GOOGLE_CLIENT_SECRET
+#   wrangler secret put GITHUB_TOKEN
+#   wrangler secret put SESSION_SECRET
