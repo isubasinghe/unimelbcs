@@ -68,5 +68,12 @@
     "status": "Current Student",
     "comment": "Search up pihedron.",
     "date": "2026-04-29"
+  },
+  {
+    "name": "Ken",
+    "program": "BSc Computing and Software Sytem",
+    "status": "Graduate",
+    "comment": "",
+    "date": "2026-04-29"
   }
 ]
