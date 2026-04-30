@@ -89,5 +89,12 @@
     "status": "Current Student",
     "comment": "The CS curriculum feels too compressed. There are too few core CS electives, so students must spend credits on less relevant math or breadth subjects. OS and networks are merged into Computer Systems, giving less depth than separate courses, despite being key topics for jobs and interviews. Breadth subjects also rarely broaden learning; many students use them to reduce workload or boost grades.",
     "date": "2026-04-30"
+  },
+  {
+    "name": "yunze hu",
+    "program": "BSC computer and software",
+    "status": "Current Student",
+    "comment": "",
+    "date": "2026-04-30"
   }
 ]
