@@ -117,5 +117,12 @@
     "status": "Current Student",
     "comment": "",
     "date": "2026-04-30"
+  },
+  {
+    "name": "quang trần",
+    "program": "BSc Computer Science 2027",
+    "status": "Current Student",
+    "comment": "I feel that the uni focus on Operating Systems and Low Level Programming is extremely lacking, whereas these are considered fundamental knowledge for a CS major in any other university around the world. \r\n\r\nAnother critique I might add is IT project is focusing too much on Web / App development, whereas the actual CS field is so much more broad and used everywhere else (like Telecommunications, Bank technologies, Cyber Security, Low Level app,...)",
+    "date": "2026-04-30"
   }
 ]
