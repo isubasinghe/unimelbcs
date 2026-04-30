@@ -75,5 +75,12 @@
     "status": "Graduate",
     "comment": "",
     "date": "2026-04-29"
+  },
+  {
+  "name": "Austen McClernon",
+  "program": "Master of Computer Science 2021",
+  "status": "Graduate",
+  "comment": "The lack of rigorous computer systems subjects is extremely unfortunate. To graduate from a computer science degree never having built an operating system, compiler or database as part of the coursework is unheard of in any half-decent computer science program, which I sincerely hope unimelb cs aspires to be.",
+  "date": "2026-04-29"
   }
 ]
