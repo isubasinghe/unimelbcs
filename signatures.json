@@ -131,5 +131,12 @@
     "status": "Current Student",
     "comment": "As a Year 1 student, I feel disappointed with the course structure.",
     "date": "2026-05-01"
+  },
+  {
+    "name": "Dương Thiên",
+    "program": "BSc Data Science",
+    "status": "Graduate",
+    "comment": "Same thing for Data Science, so I need a letter like this for Data Science course as well. Machine Learning course was so outdated even internet could teach you better. All of my friends who studied CS in unimelb has said the same",
+    "date": "2026-05-05"
   }
 ]
