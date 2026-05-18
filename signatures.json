@@ -152,5 +152,12 @@
     "status": "Current Student",
     "comment": "",
     "date": "2026-05-06"
+  },
+  {
+    "name": "Timothy Wong",
+    "program": "MIT 2026",
+    "status": "Current Student",
+    "comment": "I support this letter. I am from a non-STEM background and have done a few intro to programming to courses as an undergraduate. The tutorial experience is by far the worst I've ever come across. In last week's, only 3 students attended including myself. Students clearly don't see the value in showing up for this degree, which is a shame.",
+    "date": "2026-05-18"
   }
 ]
