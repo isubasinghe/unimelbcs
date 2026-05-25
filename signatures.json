@@ -166,5 +166,12 @@
     "status": "Graduate",
     "comment": "",
     "date": "2026-05-21"
+  },
+  {
+    "name": "J Lin",
+    "program": "MCS 2026",
+    "status": "Current Student",
+    "comment": "There is a severe lack of low level subjects like compilers and taking programming language implementation off the curriculum is mind boggling. Many subjects feel extremely rushed (CCC, NLP), there is no time to understand a topic deeply. Time allocation across projects also feel poorly distributed and research based projects should have longer page limits.",
+    "date": "2026-05-23"
   }
 ]
