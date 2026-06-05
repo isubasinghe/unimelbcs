@@ -194,5 +194,12 @@
     "status": "Current Student",
     "comment": "The Melbourne Model is our home-grown, No Child Left Behind Act 😭. It's shameless how much the uni tries to push you into further study by not offering any industry placement programs yet refuses to teach the fundamental areas that could be explored in research. I built a compiler before coming to uni and I was looking forward to learning more about them but we don't even have this class at the Master's level anymore. This curriculum is such a joke and it's frustrating seeing how lobotomised it's become.",
     "date": "2026-06-04"
+  },
+  {
+    "name": "Chi Nguyen",
+    "program": "BSci Data Science",
+    "status": "Current Student",
+    "comment": "Had the worst experience with Database Systems in my first year, had to learn everything that actually matters for my technical interviews/internships on reddit :(",
+    "date": "2026-06-03"
   }
-  ]
+]
