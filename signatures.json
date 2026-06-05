@@ -208,5 +208,12 @@
     "status": "Current Student",
     "comment": "",
     "date": "2026-06-03"
+  },
+  {
+    "name": "BT2580 h",
+    "program": "BSc Computing and Software Systems",
+    "status": "Current Student",
+    "comment": "It is not frequent that the administrator switches the lecturer of the courses I enrolled.",
+    "date": "2026-06-03"
   }
 ]
