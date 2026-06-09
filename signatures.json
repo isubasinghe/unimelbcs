@@ -236,5 +236,12 @@
     "status": "Current Student",
     "comment": "Missing fundamental computing content. Neither in depth nor in breadth...",
     "date": "2026-06-06"
+  },
+  {
+    "name": "Nathan Ben-David",
+    "program": "Bsc Computing & Software Systems",
+    "status": "Current Student",
+    "comment": "",
+    "date": "2026-06-06"
   }
 ]
