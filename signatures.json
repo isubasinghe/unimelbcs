@@ -229,5 +229,12 @@
     "status": "Current Student",
     "comment": "I chose UniMelb over other universities thinking that its prestige meant good courses. Wrong. The \"Computing and Software Systems\" major is, for lack of a better word, a scam. It is a mile wide but an inch deep, merely touching on theory across a plethora of topics while skipping foundational subjects that graduates actually need. By heavily favoring abstract theory, the curriculum forces students onto academic pathways rather than giving them the skills and choice to get into the industry.",
     "date": "2026-06-07"
+  },
+  {
+    "name": "Deen",
+    "program": "Bsc CompSci",
+    "status": "Current Student",
+    "comment": "Missing fundamental computing content. Neither in depth nor in breadth...",
+    "date": "2026-06-06"
   }
 ]
