@@ -252,10 +252,17 @@
     "date": "2026-06-05"
   },
   {
-  "name": "Jeslyn Tsui",
-  "program": "BSc Computing & Software Systems",
-  "status": "Current Student",
-  "comment": "Most classes are heavily theory-based, and involve a lot of self-learning when it comes to application. Hands-on experiences and connection to the industry are very limited.",
-  "date": "2026-06-10"
+    "name": "Jeslyn Tsui",
+    "program": "BSc Computing & Software Systems",
+    "status": "Current Student",
+    "comment": "Most classes are heavily theory-based, and involve a lot of self-learning when it comes to application. Hands-on experiences and connection to the industry are very limited.",
+    "date": "2026-06-10"
+  },
+  {
+    "name": "jasper",
+    "program": "BSc Computing and Software Systems",
+    "status": "Current Student",
+    "comment": "Jasper Glover\r\nFirst Year",
+    "date": "2026-06-12"
   }
 ]
