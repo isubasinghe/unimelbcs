@@ -264,5 +264,12 @@
     "status": "Current Student",
     "comment": "Jasper Glover\r\nFirst Year",
     "date": "2026-06-12"
+  },
+  {
+    "name": "jinghe jin",
+    "program": "MIT 2026",
+    "status": "Current Student",
+    "comment": "",
+    "date": "2026-06-12"
   }
 ]
