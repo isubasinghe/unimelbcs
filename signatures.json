@@ -271,5 +271,12 @@
     "status": "Current Student",
     "comment": "",
     "date": "2026-06-12"
+  },
+  {
+    "name": "Humayra Tasnim",
+    "program": "BSc Computing and Software Systems 2027",
+    "status": "Current Student",
+    "comment": "I'm having to learn about cloud computing and backend development online. It's very frustrating that UniMelb courses don't teach these topics.",
+    "date": "2026-06-25"
   }
 ]
