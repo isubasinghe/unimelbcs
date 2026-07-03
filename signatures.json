@@ -285,5 +285,12 @@
     "status": "Current Student",
     "comment": "",
     "date": "2026-07-01"
+  },
+  {
+    "name": "andreas p",
+    "program": "Bsc Computing",
+    "status": "Current Student",
+    "comment": "everything in the letter",
+    "date": "2026-07-03"
   }
 ]
