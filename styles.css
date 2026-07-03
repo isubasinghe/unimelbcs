@@ -425,6 +425,34 @@ td:first-child, th:first-child { font-weight: 500; }
 .demand-item strong { color: var(--ink); }
 
 /* =====================================================================
+   Update notice (response from the School)
+   ===================================================================== */
+.update-note {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem 1.5rem;
+    margin: 0 auto 2.5rem;
+}
+
+.update-note p {
+    margin: 0 0 0.75rem;
+    color: var(--ink);
+    font-size: 1rem;
+}
+
+.update-note p:last-child { margin-bottom: 0; }
+
+.update-note .update-label {
+    font-weight: 600;
+    color: var(--accent-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+}
+
+/* =====================================================================
    Urgency callout
    ===================================================================== */
 .urgency-note {
