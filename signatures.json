@@ -320,5 +320,12 @@
     "status": "Graduate",
     "comment": "I did computer science form unimelb years ago, and faced same issues, my peers knew so much more than me. I learnt a lot more CS and cyber sec in Nanyang Tech uni",
     "date": "2026-11-06"
+  },
+  {
+    "name": "Matt Xu",
+    "program": "MIT 2026",
+    "status": "Current Student",
+    "comment": "The MIT program at the University of Melbourne is disappointing.",
+    "date": "2026-11-10"
   }
 ]
